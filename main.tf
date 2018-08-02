@@ -1,5 +1,5 @@
 module "ELBSample-OpenSSLDefaultCipherPolicy" {
-  count            = "${var.policy == "ELBSample-OpenSSLDefaultCipherPolicy" ? 1 : 0}"
+  create           = "${var.policy == "ELBSample-OpenSSLDefaultCipherPolicy" ? "true" : "false"}"
   source           = "ELBSample-OpenSSLDefaultCipherPolicy"
   lb-port          = "${var.lb-port}"
   name             = "${var.name}-ssl-policy"
@@ -7,7 +7,7 @@ module "ELBSample-OpenSSLDefaultCipherPolicy" {
 }
 
 module "mozilla-modern" {
-  count            = "${var.policy == "mozilla-modern" ? 1 : 0}"
+  create           = "${var.policy == "mozilla-modern" ? "true" : "false"}"
   source           = "mozilla-modern"
   lb-port          = "${var.lb-port}"
   name             = "${var.name}-ssl-policy"
@@ -15,7 +15,7 @@ module "mozilla-modern" {
 }
 
 module "ELBSecurityPolicy-TLS-1-1-2017-01" {
-  count            = "${var.policy == "ELBSecurityPolicy-TLS-1-1-2017-01" ? 1 : 0}"
+  create           = "${var.policy == "ELBSecurityPolicy-TLS-1-1-2017-01" ? "true" : "false"}"
   source           = "ELBSecurityPolicy-TLS-1-1-2017-01"
   lb-port          = "${var.lb-port}"
   name             = "${var.name}-ssl-policy"
@@ -23,7 +23,7 @@ module "ELBSecurityPolicy-TLS-1-1-2017-01" {
 }
 
 module "ELBSecurityPolicy-TLS-1-2-2017-01" {
-  count            = "${var.policy == "ELBSecurityPolicy-TLS-1-2-2017-01" ? 1 : 0}"
+  create           = "${var.policy == "ELBSecurityPolicy-TLS-1-2-2017-01" ? "true" : "false"}"
   source           = "ELBSecurityPolicy-TLS-1-2-2017-01"
   lb-port          = "${var.lb-port}"
   name             = "${var.name}-ssl-policy"
@@ -31,7 +31,7 @@ module "ELBSecurityPolicy-TLS-1-2-2017-01" {
 }
 
 module "ELBSample-ELBDefaultCipherPolicy" {
-  count            = "${var.policy == "ELBSample-ELBDefaultCipherPolicy" ? 1 : 0}"
+  create           = "${var.policy == "ELBSample-ELBDefaultCipherPolicy" ? "true" : "false"}"
   source           = "ELBSample-ELBDefaultCipherPolicy"
   lb-port          = "${var.lb-port}"
   name             = "${var.name}-ssl-policy"
@@ -39,7 +39,7 @@ module "ELBSample-ELBDefaultCipherPolicy" {
 }
 
 module "mozilla-old" {
-  count            = "${var.policy == "mozilla-old" ? 1 : 0}"
+  create           = "${var.policy == "mozilla-old" ? "true" : "false"}"
   source           = "mozilla-old"
   lb-port          = "${var.lb-port}"
   name             = "${var.name}-ssl-policy"
@@ -47,7 +47,7 @@ module "mozilla-old" {
 }
 
 module "mozilla-intermediate" {
-  count            = "${var.policy == "mozilla-intermediate" ? 1 : 0}"
+  create           = "${var.policy == "mozilla-intermediate" ? "true" : "false"}"
   source           = "mozilla-intermediate"
   lb-port          = "${var.lb-port}"
   name             = "${var.name}-ssl-policy"
@@ -55,7 +55,7 @@ module "mozilla-intermediate" {
 }
 
 module "ELBSecurityPolicy-2016-08" {
-  count            = "${var.policy == "ELBSecurityPolicy-2016-08" ? 1 : 0}"
+  create           = "${var.policy == "ELBSecurityPolicy-2016-08" ? "true" : "false"}"
   source           = "ELBSecurityPolicy-2016-08"
   lb-port          = "${var.lb-port}"
   name             = "${var.name}-ssl-policy"

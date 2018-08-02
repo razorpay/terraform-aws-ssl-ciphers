@@ -38,13 +38,20 @@ module "ssl-policy" {
 }
 ```
 
+Note that since this uses nested modules, the state diagram is not identical if you use the dynamic
+or static import method.
+
 The following SSL Ciphers are available:
 
--   `mozilla-old`
--   `mozilla-intermediate`
--   `mozilla-modern`
--   `ELBSample-ELBDefaultCipherPolicy`
--   `ELBSample-OpenSSLDefaultCipherPolicy`
--   `ELBSecurityPolicy-2016-08`
--   `ELBSecurityPolicy-TLS-1-1-2017-01`
--   `ELBSecurityPolicy-TLS-1-2-2017-01`
+- `mozilla-old`
+- `mozilla-intermediate`
+- `mozilla-modern`
+- `ELBSample-ELBDefaultCipherPolicy`
+- `ELBSample-OpenSSLDefaultCipherPolicy`
+- `ELBSecurityPolicy-2016-08`
+- `ELBSecurityPolicy-TLS-1-1-2017-01`
+- `ELBSecurityPolicy-TLS-1-2-2017-01`
+
+# License
+
+Licensed under MIT License. See LICENSE file for details

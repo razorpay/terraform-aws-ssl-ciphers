@@ -1,4 +1,5 @@
 resource "aws_lb_ssl_negotiation_policy" "policy" {
+  count         = "${var.create ? 1  : 0}"
   name          = "${var.name}"
   load_balancer = "${var.load-balancer-id}"
   lb_port       = "${var.lb-port}"
