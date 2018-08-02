@@ -26,6 +26,18 @@ module "ssl-policy" {
 }
 ```
 
+Or if you want to dynamically decide the policy:
+
+```hcl
+module "ssl-policy" {
+    source = "github.com/razorpay/terraform-ssl-ciphers"
+    name = "${aws_elb.lb.name}-ssl-policy"
+    load-balancer-id = "${aws_elb.lb.id}"
+    policy = "mozilla-modern"
+    lb-port = "443
+}
+```
+
 The following SSL Ciphers are available:
 
 -   `mozilla-old`
