@@ -1,5 +1,9 @@
 variable "name" {
-  description = "Name of the SSL negotiation policy"
+  description = "Name of the SSL negotiation policy resource on AWS"
+}
+
+variable "policy" {
+  description = "Which SSL policy to use"
 }
 
 variable "load-balancer-id" {

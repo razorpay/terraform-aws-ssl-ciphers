@@ -19,8 +19,9 @@ resource "aws_elb" "lb" {
 }
 
 module "ssl-policy" {
-    source = "github.com/razorpay/terraform-ssl-ciphers//mozilla-old"
+    source = "github.com/razorpay/terraform-ssl-ciphers"
     name   = "${aws_elb.lb.name}-ssl-policy"
+    policy = "mozilla-old"
     load-balancer-id = "${aws_elb.lb.id}"
     lb-port = "443"
 }
