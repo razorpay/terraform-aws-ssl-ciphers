@@ -19,7 +19,7 @@ resource "aws_elb" "lb" {
 }
 
 module "ssl-policy" {
-    source = "github.com/razorpay/terraform-ssl-ciphers//mozilla-old"
+    source = "github.com/razorpay/terraform-aws-ssl-ciphers//mozilla-old"
     name   = "${aws_elb.lb.name}-ssl-policy"
     load-balancer-id = "${aws_elb.lb.id}"
     lb-port = "443"
@@ -30,7 +30,7 @@ Or if you want to dynamically decide the policy:
 
 ```hcl
 module "ssl-policy" {
-    source = "github.com/razorpay/terraform-ssl-ciphers"
+    source = "github.com/razorpay/terraform-aws-ssl-ciphers"
     name = "${aws_elb.lb.name}-ssl-policy"
     load-balancer-id = "${aws_elb.lb.id}"
     policy = "mozilla-modern"
