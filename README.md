@@ -34,7 +34,7 @@ module "ssl-policy" {
     name = "${aws_elb.lb.name}-ssl-policy"
     load-balancer-id = "${aws_elb.lb.id}"
     policy = "mozilla-modern"
-    lb-port = "443
+    lb-port = "443"
 }
 ```
 
