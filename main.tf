@@ -61,3 +61,11 @@ module "ELBSecurityPolicy-2016-08" {
   name             = "${var.name}-ssl-policy"
   load-balancer-id = "${var.load-balancer-id}"
 }
+
+module "ELBSecurityPolicy-TLS-1-2-Ext-2018-06" {
+  create           = "${var.policy == "ELBSecurityPolicy-TLS-1-2-Ext-2018-06" ? "true" : "false"}"
+  source           = "ELBSecurityPolicy-TLS-1-2-Ext-2018-06"
+  lb-port          = "${var.lb-port}"
+  name             = "${var.name}-ssl-policy"
+  load-balancer-id = "${var.load-balancer-id}"
+}
