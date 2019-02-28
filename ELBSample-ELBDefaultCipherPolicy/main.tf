@@ -30,93 +30,13 @@ resource "aws_lb_ssl_negotiation_policy" "policy" {
   }
 
   attribute {
-    name  = "ECDHE-ECDSA-AES128-GCM-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ECDHE-RSA-AES128-GCM-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ECDHE-ECDSA-AES128-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ECDHE-RSA-AES128-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ECDHE-ECDSA-AES128-SHA"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ECDHE-RSA-AES128-SHA"
-    value = "false"
-  }
-
-  attribute {
     name  = "DHE-RSA-AES128-SHA"
     value = "true"
   }
 
   attribute {
-    name  = "ECDHE-ECDSA-AES256-GCM-SHA384"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ECDHE-RSA-AES256-GCM-SHA384"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ECDHE-ECDSA-AES256-SHA384"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ECDHE-RSA-AES256-SHA384"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ECDHE-RSA-AES256-SHA"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ECDHE-ECDSA-AES256-SHA"
-    value = "false"
-  }
-
-  attribute {
-    name  = "AES128-GCM-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "AES128-SHA256"
-    value = "false"
-  }
-
-  attribute {
     name  = "AES128-SHA"
     value = "true"
-  }
-
-  attribute {
-    name  = "AES256-GCM-SHA384"
-    value = "false"
-  }
-
-  attribute {
-    name  = "AES256-SHA256"
-    value = "false"
   }
 
   attribute {
@@ -145,38 +65,8 @@ resource "aws_lb_ssl_negotiation_policy" "policy" {
   }
 
   attribute {
-    name  = "ECDHE-RSA-RC4-SHA"
-    value = "false"
-  }
-
-  attribute {
     name  = "RC4-SHA"
     value = "true"
-  }
-
-  attribute {
-    name  = "ECDHE-ECDSA-RC4-SHA"
-    value = "false"
-  }
-
-  attribute {
-    name  = "DHE-DSS-AES256-GCM-SHA384"
-    value = "false"
-  }
-
-  attribute {
-    name  = "DHE-RSA-AES256-GCM-SHA384"
-    value = "false"
-  }
-
-  attribute {
-    name  = "DHE-RSA-AES256-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "DHE-DSS-AES256-SHA256"
-    value = "false"
   }
 
   attribute {
@@ -210,26 +100,6 @@ resource "aws_lb_ssl_negotiation_policy" "policy" {
   }
 
   attribute {
-    name  = "DHE-DSS-AES128-GCM-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "DHE-RSA-AES128-GCM-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "DHE-RSA-AES128-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "DHE-DSS-AES128-SHA256"
-    value = "false"
-  }
-
-  attribute {
     name  = "DHE-RSA-CAMELLIA128-SHA"
     value = "true"
   }
@@ -237,66 +107,6 @@ resource "aws_lb_ssl_negotiation_policy" "policy" {
   attribute {
     name  = "DHE-DSS-CAMELLIA128-SHA"
     value = "true"
-  }
-
-  attribute {
-    name  = "ADH-AES128-GCM-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ADH-AES128-SHA"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ADH-AES128-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ADH-AES256-GCM-SHA384"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ADH-AES256-SHA"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ADH-AES256-SHA256"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ADH-CAMELLIA128-SHA"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ADH-CAMELLIA256-SHA"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ADH-DES-CBC3-SHA"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ADH-DES-CBC-SHA"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ADH-RC4-MD5"
-    value = "false"
-  }
-
-  attribute {
-    name  = "ADH-SEED-SHA"
-    value = "false"
   }
 
   attribute {
@@ -325,11 +135,6 @@ resource "aws_lb_ssl_negotiation_policy" "policy" {
   }
 
   attribute {
-    name  = "IDEA-CBC-SHA"
-    value = "false"
-  }
-
-  attribute {
     name  = "RC4-MD5"
     value = "true"
   }
@@ -337,21 +142,6 @@ resource "aws_lb_ssl_negotiation_policy" "policy" {
   attribute {
     name  = "SEED-SHA"
     value = "true"
-  }
-
-  attribute {
-    name  = "DES-CBC3-MD5"
-    value = "false"
-  }
-
-  attribute {
-    name  = "DES-CBC-MD5"
-    value = "false"
-  }
-
-  attribute {
-    name  = "RC2-CBC-MD5"
-    value = "false"
   }
 
   attribute {
@@ -415,11 +205,6 @@ resource "aws_lb_ssl_negotiation_policy" "policy" {
   }
 
   attribute {
-    name  = "EXP-ADH-DES-CBC-SHA"
-    value = "false"
-  }
-
-  attribute {
     name  = "EXP-DES-CBC-SHA"
     value = "true"
   }
@@ -447,11 +232,6 @@ resource "aws_lb_ssl_negotiation_policy" "policy" {
   attribute {
     name  = "EXP-KRB5-DES-CBC-MD5"
     value = "true"
-  }
-
-  attribute {
-    name  = "EXP-ADH-RC4-MD5"
-    value = "false"
   }
 
   attribute {
