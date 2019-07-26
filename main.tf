@@ -69,3 +69,11 @@ module "ELBSecurityPolicy-TLS-1-2-Ext-2018-06" {
   name             = "${var.name}-ssl-policy"
   load-balancer-id = "${var.load-balancer-id}"
 }
+
+module "tls-1-1-no-rsa" {
+  create           = "${var.policy == "tls-1-1-no-rsa" ? "true" : "false"}"
+  source           = "tls-1-1-no-rsa"
+  lb-port          = "${var.lb-port}"
+  name             = "${var.name}-ssl-policy"
+  load-balancer-id = "${var.load-balancer-id}"
+}
